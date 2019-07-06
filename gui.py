@@ -106,6 +106,7 @@ class houseGUI:
         soc.connect(("192.168.10.1", 1546))
         soc.send(packet)
         soc.close()
+        self.pin_entry_txt.set(PLACEHOLDER_TEXT)
 
     def lock(self):
         """
