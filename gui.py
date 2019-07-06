@@ -94,7 +94,7 @@ class houseGUI:
         self.root.mainloop()
     
     
-    def send_control_packet(mode):
+    def send_control_packet(self, mode):
         """
         Sends the control packet to raspberry. Packet contains the pin and mode for the alarm
         """
