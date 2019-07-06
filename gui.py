@@ -9,7 +9,7 @@ class houseGUI:
     def __init__(self):
         self.root = Tk()
         self.root.title("Alarm")
-        self.root.attributes('-fullscreen', False)
+        self.root.attributes('-fullscreen', True)
 
         i = 0
         while(i < 8):
