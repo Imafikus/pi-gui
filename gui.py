@@ -37,21 +37,33 @@ class houseGUI:
         
         #? entry button widgets
         
-        i = 1
-        row = 1
-        col = 1
-        while(i < 10):
-            if(i >= 1 and i <= 3): row = 1
-            if(i >= 4 and i <= 6): row = 2
-            if(i >= 7 and i <= 9): row = 3
-            
-            btn1 = ttk.Button(self.root, text = str(i), command = lambda: self.input(i))
-            btn1.grid(row = row, column = col - 1, sticky = "nwse", padx = 5, pady = 5)
-            i += 1
-            
-            col = col % 3 + 1
-            print(col, "col")
+        btn1 = ttk.Button(self.root, text = "1", command = lambda: self.input(1))
+        btn1.grid(row = 1, column = 0, sticky = "nwse", padx = 5, pady = 5)
+        
+        btn2 = ttk.Button(self.root, text = "2", command = lambda: self.input(2))
+        btn2.grid(row = 1, column = 1, sticky = "nwse", padx = 5, pady = 5)
+        
+        btn3 = ttk.Button(self.root, text = "3", command = lambda: self.input(3))
+        btn3.grid(row = 1, column = 2, sticky = "nwse", padx = 5, pady = 5)
+        
+        btn4 = ttk.Button(self.root, text = "4", command = lambda: self.input(4))
+        btn4.grid(row = 2, column = 0, sticky = "nwse", padx = 5, pady = 5)
+        
+        btn5 = ttk.Button(self.root, text = "5", command = lambda: self.input(5))
+        btn5.grid(row = 2, column = 1, sticky = "nwse", padx = 5, pady = 5)
+        
+        btn6 = ttk.Button(self.root, text = "6", command = lambda: self.input(6))
+        btn6.grid(row = 2, column = 2, sticky = "nwse", padx = 5, pady = 5)
 
+        btn7 = ttk.Button(self.root, text = "7", command = lambda: self.input(7))
+        btn7.grid(row = 3, column = 0, sticky = "nwse", padx = 5, pady = 5)
+        
+        btn8 = ttk.Button(self.root, text = "8", command = lambda: self.input(8))
+        btn8.grid(row = 3, column = 1, sticky = "nwse", padx = 5, pady = 5)
+        
+        btn9 = ttk.Button(self.root, text = "9", command = lambda: self.input(9))
+        btn9.grid(row = 3, column = 2, sticky = "nwse", padx = 5, pady = 5)
+        
         btn0 = ttk.Button(self.root, text = "0", command = lambda: self.input(0))
         btn0.grid(row = 4, column = 1, sticky = "nwse", padx = 5, pady = 5)
         
@@ -62,36 +74,6 @@ class houseGUI:
         #? unlock button widget
         unlock_button = ttk.Button(self.root, text = "Unlock", command = self.unlock)
         unlock_button.grid(row = 4, column = 2, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn1 = ttk.Button(self.root, text = "1", command = lambda: self.input(1))
-        # btn1.grid(row = 1, column = 0, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn2 = ttk.Button(self.root, text = "2", command = lambda: self.input(2))
-        # btn2.grid(row = 1, column = 1, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn3 = ttk.Button(self.root, text = "3", command = lambda: self.input(3))
-        # btn3.grid(row = 1, column = 2, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn4 = ttk.Button(self.root, text = "4", command = lambda: self.input(4))
-        # btn4.grid(row = 2, column = 0, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn5 = ttk.Button(self.root, text = "5", command = lambda: self.input(5))
-        # btn5.grid(row = 2, column = 1, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn6 = ttk.Button(self.root, text = "6", command = lambda: self.input(6))
-        # btn6.grid(row = 2, column = 2, sticky = "nwse", padx = 5, pady = 5)
-
-        # btn7 = ttk.Button(self.root, text = "7", command = lambda: self.input(7))
-        # btn7.grid(row = 3, column = 0, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn8 = ttk.Button(self.root, text = "8", command = lambda: self.input(8))
-        # btn8.grid(row = 3, column = 1, sticky = "nwse", padx = 5, pady = 5)
-        
-        # btn9 = ttk.Button(self.root, text = "9", command = lambda: self.input(9))
-        # btn9.grid(row = 3, column = 2, sticky = "nwse", padx = 5, pady = 5)
-        
-        
-        
 
     def run(self):
         self.root.mainloop()
