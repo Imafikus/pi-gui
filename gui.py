@@ -8,8 +8,9 @@ class houseGUI:
 
     def __init__(self):
         self.root = Tk()
+        self.root.geometry("1920x1080")
         self.root.title("Alarm")
-        self.root.attributes('-fullscreen', True)
+        # self.root.attributes('-fullscreen', True)
 
         i = 0
         while(i < 8):
