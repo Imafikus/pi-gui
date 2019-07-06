@@ -8,7 +8,7 @@ class houseGUI:
 
     def __init__(self):
         self.root = Tk()
-        self.root.geometry("1920x1080")
+        self.root.geometry("800x480")
         self.root.title("Alarm")
         # self.root.attributes('-fullscreen', True)
 
