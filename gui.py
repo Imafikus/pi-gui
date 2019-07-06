@@ -103,7 +103,7 @@ class houseGUI:
         packet = str_packet.encode("ascii")
 
         soc = socket()
-        soc.connect(("localhost", 1546))
+        soc.connect(("192.168.10.1", 1546))
         soc.send(packet)
         soc.close()
 
