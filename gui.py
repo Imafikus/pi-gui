@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from socket import socket
 
 PLACEHOLDER_TEXT = "Enter PIN"
 INVALID_PIN = "Invalid PIN!"
@@ -93,19 +94,31 @@ class houseGUI:
         self.root.mainloop()
     
     
+    def send_control_packet(mode):
+        """
+        Sends the control packet to raspberry. Packet contains the pin and mode for the alarm
+        """
+        pin = self.pin_entry_txt.get()
+        str_packet = "alarm " + mode + " " + pin + "\r\n"
+        packet = str_packet.encode("ascii")
+
+        soc = socket()
+        soc.connect(("localhost", 1546))
+        soc.send(packet)
+        soc.close()
+
     def lock(self):
         """
         """
+        print("lock")
 
-        print("Current PIN lock: ", self.pin_entry_txt.get())
+        self.send_control_packet("arm")
     
     def unlock(self):
         """
         """
-        if(self.pin_entry_txt.get() != "1234"):
-            self.pin_entry_txt.set(INVALID_PIN)
-
-        print("Current PIN unlock: ", self.pin_entry_txt.get())
+        print("unlock")
+        self.send_control_packet("disarm")
     
     def input(self, num):
         """
